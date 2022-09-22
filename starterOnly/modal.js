@@ -61,7 +61,9 @@ function validate() {
         document.getElementById("lastNameError").style.display = "block";
     }
     let email = form.email.value;
-    if (email.length < 2 || email == false) {
+    const emailRegEx =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegEx.test(email)) {
         hasError = true;
         document.getElementById("emailError").style.display = "block";
     }
@@ -83,8 +85,7 @@ function validate() {
         hasError = true;
         document.getElementById("locationError").style.display = "block";
     }
-    let Checkbox = form.checkbox1.value;
-    if (Checkbox != Checkbox) {
+    if (!form.checkbox1.checked) {
         hasError = true;
         document.getElementById("checkError").style.display = "block";
     }
