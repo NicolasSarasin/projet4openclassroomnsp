@@ -37,6 +37,15 @@ img {
 .header-logo {
     float: left;
 }
+
+@media screen and (max-width: 768px) {
+    .header-logo img {
+        height: 25px;
+    }
+}
+.header-logo img {
+    height: 50px;
+}
 .main-navbar {
     float: right;
 }
@@ -505,6 +514,13 @@ footer {
     padding-right: 2vw;
     margin: 0 20px;
 }
+
+@media screen and (max-width: 1000px) {
+	.hero-headline {
+		font-size: 4.5rem;
+	}
+}
+
 @media screen and (max-width: 800px) {
     .hero-section {
         display: block;
@@ -544,6 +560,15 @@ footer {
         margin-top: 50px;
         text-align: center;
     }
+}
+
+@media screen and (max-width: 460px) {
+	.hero-headline {
+		font-size: 3rem;
+	}
+	.hero-content {
+		min-width: unset;
+	}
 }
 
 @keyframes modalopen {
